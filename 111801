@@ -1,0 +1,17 @@
+package App1;
+
+import javax.swing.*;
+
+public class APP {
+    private JPanel Panel;
+    private JButton button1;
+    void go(){       JFrame frame = new JFrame("APP");
+        frame.setContentPane(Panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(600,300);
+        frame.setBounds(200,300,300,300);
+        frame.setVisible(true);}
+    public static void main(String[] args) {
+        new APP().go();
+    }
+}
