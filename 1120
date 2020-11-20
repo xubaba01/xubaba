@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+public class APP {
+    private JPanel myPanel=new JPanel();
+    private JLabel label_img=new JLabel();
+    JLabel label=new JLabel();
+    JLabel label_score=new JLabel();
+    int i=0;
+    public APP() {
+
+        label_img.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                label_img.setBounds((int)(Math.random()*10%10*50),(int)(Math.random()*10%10*50),75,75);
+                i++;
+                label_score.setText("score:"+String. valueOf(i));
+            }
+        });
+    }
+
+    void go(){
+        myPanel.setLayout(null);
+        java.net.URL img=APP.class.getResource("di.gif");
+        label_img.setIcon(new ImageIcon(img));
+        java.net.URL img1=APP.class.getResource("bei.jpg");
+        label.setIcon(new ImageIcon(img1));
+        label_img.setBounds(100,100,75,75);
+        label.setBounds(0,0,1024,720);
+        label_score.setBounds(30,-50,200,200);
+        label_score.setFont(new Font("Arial",Font.BOLD,40));
+        label_score.setForeground(Color.ORANGE);
+        myPanel.add(label_score);
+        myPanel.add(label_img);
+        myPanel.add(label);
+        JFrame frame = new JFrame("快乐暴打");
+        frame.setBounds(100,100,1024,720);
+        frame.setContentPane(myPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new APP().go();
+    }
+
+    }
