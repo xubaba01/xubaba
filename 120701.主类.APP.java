@@ -1,23 +1,11 @@
-package D112301;
-
-import java.util.Random;
-import java.util.Scanner;
-
-public class App {
+public class Xu {
     public static void main(String[] args) {
-        Random random = new Random();
-
-        while (true) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("输入字符");
-            String i = scanner.next();
-            if (i.equals("a")) {
-                int x = random.nextInt(100) + 1;
-                int y = random.nextInt(100) + 1;
-                System.out.println("x的坐标为:" + x + "----y的坐标为:" + y);
-                break;
-            } else {
-                System.out.println("输入字符错误");
-            }
-        }
+        int [][] array={
+                {1,2,3,4,5,6},
+                {7,8,9,10,0,12},
+                {8,8,9,10,11,12},
+                {7,8,3,10,11,12},
+                {88,66,92,102,151,999}
+        };
+        arrayFindValue(array,0);
     }
