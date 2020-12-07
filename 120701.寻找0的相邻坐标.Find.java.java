@@ -1,4 +1,4 @@
-package demo.Xu;
+package Xu;
 
 
 public class Xu {
